@@ -23,8 +23,12 @@ public class Manager {
 
   public Manager(int numThread) {
     this.numThread = numThread;
-    this.progressbar = new Progressbar(Helper.experimentCount, numThread);
+    this.progressbar = new Progressbar(Helper.experimentCount);
     this.executorService = Executors.newFixedThreadPool(numThread);
+  }
+
+  public void ZeroingOfProbability() {
+    Helper.getInstance().ZeroingOfProbability();
   }
 
   public double startComputation() {

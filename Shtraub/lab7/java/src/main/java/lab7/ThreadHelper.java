@@ -25,6 +25,11 @@ public class ThreadHelper {
     System.out.println("Probability = " + result);
   }
 
+  public void ZeroingOfProbability() {
+    result = 0.0;
+    sum = 0.0;
+  }
+
   public double getResult() {
     return result;
   }

@@ -7,12 +7,10 @@ public class Progressbar {
 
   private long commonCycle;
   private volatile long currentCycle;
-  private int numThread;
 
-  public Progressbar(long commonCycle, int numThread) {
+  public Progressbar(long commonCycle) {
     this.commonCycle = commonCycle;
     this.currentCycle = commonCycle;
-    this.numThread = numThread;
   }
 
   public void updateProgress(long computed) {

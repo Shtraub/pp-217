@@ -73,7 +73,7 @@ public class Lab7 implements Callable<Double> {
             progressbar.updateProgress(counter);
             counter = 0;
           } catch (Exception e) {
-            System.out.println(e.toString());
+            throw e;
           } finally {
             locker.unlock();
           }
@@ -88,7 +88,7 @@ public class Lab7 implements Callable<Double> {
     try {
       latch.await();
     } catch (InterruptedException e) {
-      System.out.println(e.toString());
+      throw e;
     }
 
     System.out.println(Thread.currentThread().getName() + " Delay time: " + (
